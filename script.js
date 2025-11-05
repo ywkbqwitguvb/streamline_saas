@@ -35,3 +35,11 @@ window.addEventListener('load', () => {
         }, index * 200);
     });
 });
+
+// FAQ Accordion functionality
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+    });
+});

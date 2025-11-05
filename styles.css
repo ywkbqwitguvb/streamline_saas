@@ -265,7 +265,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -298,8 +298,8 @@ h2 {
     color: white;
     padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 0.575rem;
+    font-weight: 300;
 }
 
 .pricing-card h3 {
@@ -372,6 +372,135 @@ h2 {
     font-weight: bold;
 }
 
+/* FAQ Section */
+.faq {
+    padding: 4rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 3rem;
+    color: #16243D;
+    margin-bottom: 1rem;
+}
+
+.faq-subtitle {
+    font-size: 1.25rem;
+    color: #4A5568;
+    margin-bottom: 4rem;
+}
+
+.faq-container {
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #16243D;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-icon {
+    color: #0066FF;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: #4A5568;
+    line-height: 1.6;
+    display: none;
+}
+
+.faq-question[aria-expanded="true"] + .faq-answer {
+    display: block;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 6rem 1rem;
+    background: linear-gradient(135deg, #0066FF, #00C2FF);
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    -webkit-text-fill-color: white;
+    background: none;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-section .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.cta-section .cta-primary {
+    background-color: white;
+    color: #0066FF;
+}
+
+.cta-section .cta-secondary.light {
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
+}
+
+.cta-section .cta-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #16243D;
+    color: white;
+}
+
+footer p {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
@@ -436,4 +565,9 @@ h2 {
     .professional {
         padding-top: 2.5rem;
     }
+
+    .faq-container {
+        padding: 0 1rem;
+    }
+}
 }
